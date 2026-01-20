@@ -1,0 +1,82 @@
+/* --- GLOBAL RESET & TYPOGRAPHY --- */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+body { color: #334155; line-height: 1.6; background-color: #f8fafc; }
+a { text-decoration: none; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- COLOR PALETTE --- */
+:root {
+    --primary: #0f172a;       /* Dark Navy */
+    --primary-light: #1e293b; 
+    --accent: #10b981;        /* FinTech Green */
+    --accent-dark: #059669;   
+    --white: #ffffff;
+    --gray-light: #f1f5f9;
+    --border: #e2e8f0;
+}
+
+/* --- UTILITIES --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+.section-padding { padding: 80px 0; }
+.highlight { color: var(--accent); }
+
+/* --- NAVIGATION --- */
+nav { background: var(--white); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { color: var(--primary); font-weight: 500; font-size: 0.95rem; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.btn-nav { background: var(--accent); color: white !important; padding: 10px 24px; border-radius: 6px; font-weight: 600; }
+.btn-nav:hover { background: var(--accent-dark); }
+
+/* --- HERO & HEADERS --- */
+.hero { background: var(--primary); color: var(--white); padding: 120px 0 100px; text-align: center; }
+.hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px; font-weight: 800; }
+.hero p { font-size: 1.25rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 40px; }
+
+/* Inner Page Header */
+.page-header { background: var(--primary); color: white; padding: 80px 0; text-align: center; }
+.page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.page-header p { color: #cbd5e1; font-size: 1.1rem; }
+
+/* --- BUTTONS --- */
+.btn-primary { background: var(--accent); color: white; padding: 16px 32px; border-radius: 6px; font-weight: 600; display: inline-block; font-size: 1.1rem; border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-secondary { background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 14px 30px; border-radius: 6px; font-weight: 600; display: inline-block; }
+.btn-secondary:hover { background: var(--primary); color: white; }
+
+/* --- CARDS & GRIDS --- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.card { background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: var(--accent); }
+.card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
+.card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+.card p { color: #64748b; }
+
+/* --- CONTACT FORM --- */
+.contact-form { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary); }
+.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; }
+.form-group input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+/* --- FOOTER --- */
+footer { background: var(--primary); color: white; padding: 60px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-logo { font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; display: block; }
+.footer-links h4 { margin-bottom: 20px; color: var(--accent); }
+.footer-links ul li { margin-bottom: 10px; }
+.footer-links a { color: #cbd5e1; }
+.footer-links a:hover { color: white; }
+.copyright { border-top: 1px solid #334155; padding-top: 20px; text-align: center; color: #94a3b8; font-size: 0.9rem; }
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .nav-links { display: none; } 
+    .grid-2 { grid-template-columns: 1fr; }
+}
